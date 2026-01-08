@@ -351,3 +351,110 @@ footer {
         text-align: center;
     }
 }
+
+.about-hero {
+    text-align: center;
+    padding: 100px 20px 60px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.badge {
+    background: #333;
+    color: #fff;
+    font-size: 12px;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+    display: inline-block;
+}
+
+.stats-section {
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+    background: rgba(255, 255, 255, 0.02);
+    margin-bottom: 80px;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-right: 1px solid var(--border-color);
+}
+
+.stat-item:last-child {
+    border-right: none;
+}
+
+.stat-number {
+    font-size: 3rem;
+    font-weight: 800;
+    background: linear-gradient(to bottom, #fff, #666);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 8px;
+}
+
+.stat-label {
+    color: var(--text-secondary);
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.creator-section {
+    max-width: 1200px;
+    margin: 0 auto 100px;
+    padding: 0 24px;
+}
+
+.creator-content {
+    background: linear-gradient(180deg, #111 0%, #000 100%);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 60px;
+    text-align: left;
+}
+
+.creator-content h2 {
+    font-size: 2.5rem;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.creator-content p {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+    line-height: 1.7;
+    max-width: 600px;
+    margin-bottom: 40px;
+}
+
+@media (max-width: 768px) {
+    .stats-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 40px 0;
+    }
+    .stat-item:nth-child(2) {
+        border-right: none;
+    }
+    .creator-content {
+        padding: 30px;
+        text-align: center;
+    }
+    .creator-content .hero-buttons {
+        justify-content: center !important;
+    }
+}
