@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentation - Next.js Static Clone</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-left">
+            <a href="index.html" style="display: flex; align-items: center; gap: 20px; text-decoration: none; color: white;">
+                <svg class="logo" height="20" viewBox="0 0 180 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M180 90C180 139.706 139.706 180 90 180C40.2944 180 0 139.706 0 90C0 40.2944 40.2944 0 90 0C139.706 0 180 40.2944 180 90Z" fill="white"/>
+                    <path d="M149.508 157.52L69.142 54H54V125.97H66.1136V69.3836L139.999 164.845C143.333 162.614 146.509 160.165 149.508 157.52Z" fill="black"/>
+                    <rect x="115" y="54" width="12" height="72" fill="black"/>
+                </svg>
+                <span class="logo-text">NEXT.js</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="showcase.html" class="nav-link-item">Showcase</a></li>
+                <li><a href="docs.html" class="nav-link-item">Docs</a></li>
+                <li><a href="#" class="nav-link-item">Blog</a></li>
+                <li><a href="#" class="nav-link-item">Templates</a></li>
+                <li><a href="#" class="nav-link-item">Enterprise</a></li>
+                <li><a href="about.html" class="nav-link-item">About</a></li>
+            </ul>
+        </div>
+        <div class="nav-right">
+            <div class="search-bar">Search docs... <span class="kbd">Ctrl K</span></div>
+            <button class="btn-learn">API Reference</button>
+        </div>
+    </nav>
+
+    <div class="docs-container">
+        <aside class="docs-sidebar">
+            <nav>
+                <h3 class="sidebar-heading">Getting Started</h3>
+                <ul>
+                    <li><a href="#" class="sidebar-link active">Introduction</a></li>
+                    <li><a href="#" class="sidebar-link">Installation</a></li>
+                    <li><a href="#" class="sidebar-link">Basic Concepts</a></li>
+                </ul>
+                <h3 class="sidebar-heading">Core Features</h3>
+                <ul>
+                    <li><a href="#" class="sidebar-link">Routing</a></li>
+                    <li><a href="#" class="sidebar-link">Data Fetching</a></li>
+                    <li><a href="#" class="sidebar-link">Styling</a></li>
+                    <li><a href="#" class="sidebar-link">Optimizations</a></li>
+                </ul>
+                <h3 class="sidebar-heading">Advanced Guides</h3>
+                <ul>
+                    <li><a href="#" class="sidebar-link">Deployment</a></li>
+                    <li><a href="#" class="sidebar-link">API Routes</a></li>
+                    <li><a href="#" class="sidebar-link">Middleware</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="docs-content">
+            <h1 class="docs-title">Introduction to Next.js</h1>
+            <p>
+                Next.js is a React framework that gives you the best developer experience with all the features you need for production: hybrid static & server rendering, TypeScript support, smart bundling, route pre-fetching, and more.
+            </p>
+            <p>
+                This documentation provides a comprehensive guide to building applications with Next.js. Whether you're a beginner or an experienced developer, you'll find resources here to help you get started and master the framework.
+            </p>
+
+            <h2 id="installation">Installation</h2>
+            <p>
+                To get started with a new Next.js project, open your terminal and run the following command:
+            </p>
+            <pre><code>npx create-next-app@latest my-next-app</code></pre>
+            <p>
+                This will create a new directory named `my-next-app` with all the necessary files to start developing. Navigate into the directory and start the development server:
+            </p>
+            <pre><code>cd my-next-app
+npm run dev</code></pre>
+            <p>
+                Your Next.js application will now be running on `http://localhost:3000`.
+            </p>
+
+            <h2 id="basic-concepts">Basic Concepts</h2>
+            <h3>Pages and Routing</h3>
+            <p>
+                In Next.js, a "page" is a React Component exported from a `.js`, `.jsx`, `.ts`, or `.tsx` file in the `pages` directory. Each page is associated with a route based on its file name. For example, `pages/about.js` automatically maps to `/about`.
+            </p>
+            <h3>Components</h3>
+            <p>
+                Next.js uses React components to build user interfaces. Components are reusable, self-contained pieces of code that define a part of your UI.
+            </p>
+            <pre><code>// components/MyButton.js
+import React from 'react';
+
+function MyButton({ children }) {
+  return (
+    &lt;button style={{ padding: '10px 20px', backgroundColor: 'blue', color: 'white', border: 'none', borderRadius: '5px' }}>
+      {children}
+    &lt;/button>
+  );
+}
+
+export default MyButton;</code></pre>
+            <p>
+                You can then import and use this component in your pages or other components.
+            </p>
+
+            <h2 id="styling">Styling Your Application</h2>
+            <p>
+                Next.js supports various styling methods, including CSS Modules, Styled Components, Emotion, and Tailwind CSS.
+            </p>
+            <h3>CSS Modules</h3>
+            <p>
+                CSS Modules are a great way to scope your CSS locally to components. Simply name your CSS files with the `.module.css` extension, and Next.js will handle the rest.
+            </p>
+            <pre><code>/* styles/Button.module.css */
+.button {
+  background-color: green;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 4px;
+}</code></pre>
+            <pre><code>// components/AnotherButton.js
+import styles from '../styles/Button.module.css';
+
+function AnotherButton() {
+  return &lt;button className={styles.button}>Click Me&lt;/button>;
+}
+
+export default AnotherButton;</code></pre>
+        </main>
+    </div>
+
+    <footer>
+        <div class="footer-logo">▲ Vercel</div>
+        <div class="copyright">
+            ©️ 2026 Vercel, Inc. (Clone Project)
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
