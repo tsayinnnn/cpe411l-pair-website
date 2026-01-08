@@ -466,3 +466,183 @@ footer {
 .nav-link-item:hover {
     color: var(--text-color);
 }
+
+.docs-container {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    max-width: 1400px;
+    margin: 40px auto;
+    gap: 40px;
+    padding: 0 24px;
+}
+
+.docs-sidebar {
+    position: sticky;
+    top: 100px; /* Adjust based on navbar height + desired offset */
+    height: calc(100vh - 120px); /* Adjust to make it scrollable within viewport */
+    overflow-y: auto;
+    padding-right: 20px;
+}
+
+.sidebar-heading {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text-color);
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+.docs-sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.docs-sidebar li {
+    margin-bottom: 8px;
+}
+
+.sidebar-link {
+    display: block;
+    color: var(--text-secondary);
+    text-decoration: none;
+    padding: 6px 0;
+    font-size: 15px;
+    transition: color 0.2s, background-color 0.2s;
+    border-radius: 4px;
+}
+
+.sidebar-link:hover {
+    color: var(--text-color);
+}
+
+.sidebar-link.active {
+    color: var(--text-color);
+    font-weight: 600;
+    /* Optional: add a subtle background or border to active link */
+    /* background: rgba(255, 255, 255, 0.05); */
+}
+
+.docs-content {
+    padding-bottom: 100px;
+    max-width: 800px;
+    margin-right: auto;
+}
+
+.docs-content .docs-title {
+    font-size: 3rem;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+
+.docs-content h2 {
+    font-size: 2.2rem;
+    margin-top: 60px;
+    margin-bottom: 20px;
+}
+
+.docs-content h3 {
+    font-size: 1.6rem;
+    margin-top: 40px;
+    margin-bottom: 15px;
+    color: #eee;
+}
+
+.docs-content p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: var(--text-secondary);
+    margin-bottom: 20px;
+}
+
+.docs-content pre {
+    background-color: #1a1a1a;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 16px;
+    overflow-x: auto;
+    font-family: 'SF Mono', 'Cascadia Code', 'Fira Code', monospace;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin: 25px 0;
+}
+
+.docs-content code {
+    color: #e0e0e0;
+}
+
+@media (max-width: 1024px) {
+    .docs-container {
+        grid-template-columns: 1fr;
+        gap: 0;
+        margin-top: 20px;
+    }
+    .docs-sidebar {
+        position: relative;
+        top: 0;
+        height: auto;
+        padding: 0 24px;
+        margin-bottom: 40px;
+        border-bottom: 1px solid var(--border-color);
+        padding-bottom: 20px;
+        overflow: hidden; /* Prevent horizontal scrollbar on small screens */
+    }
+    .docs-sidebar nav {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px 30px;
+    }
+    .docs-sidebar h3 {
+        width: 100%;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    .docs-sidebar ul {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px 20px;
+    }
+    .docs-sidebar li {
+        margin-bottom: 0;
+    }
+    .docs-sidebar .sidebar-link {
+        padding: 4px 8px;
+        background: #1a1a1a;
+        border: 1px solid #333;
+    }
+    .docs-sidebar .sidebar-link.active {
+        background: #000;
+        border-color: #fff;
+    }
+    .docs-content {
+        padding: 0 24px;
+        margin: 0 auto; /* Center content */
+    }
+    .docs-content .docs-title {
+        font-size: 2.5rem;
+    }
+    .docs-content h2 {
+        font-size: 1.8rem;
+    }
+    .docs-content h3 {
+        font-size: 1.4rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .docs-sidebar nav {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .docs-sidebar ul {
+        flex-direction: column;
+        gap: 8px;
+        align-items: flex-start;
+    }
+    .docs-sidebar .sidebar-link {
+        width: auto;
+        padding: 6px 12px;
+    }
+}
