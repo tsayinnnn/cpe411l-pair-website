@@ -1,13 +1,185 @@
+```
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Next.js by Vercel - The React Framework</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Next.js by Vercel - The React Framework</title>
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-  
-    <script src="script.js"></script>
+  <nav class="navbar">
+    <div class="nav-left">
+      <svg class="logo" height="20" viewBox="0 0 180 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M180 90C180 139.706 139.706 180 90 180C40.2944 180 0 139.706 0 90C0 40.2944 40.2944 0 90 0C139.706 0 180 40.2944 180 90Z"
+          fill="white" />
+        <path
+          d="M149.508 157.52L69.142 54H54V125.97H66.1136V69.3836L139.999 164.845C143.333 162.614 146.509 160.165 149.508 157.52Z"
+          fill="black" />
+        <rect x="115" y="54" width="12" height="72" fill="black" />
+      </svg>
+      <span class="logo-text">NEXT.js</span>
+      <ul class="nav-links">
+        <li>Showcase</li>
+        <li>Docs</li>
+        <li>Blog</li>
+        <li>Templates</li>
+        <li>Enterprise</li>
+      </ul>
+    </div>
+    <div class="nav-right">
+      <div class="search-bar">Search documentation... <span class="kbd">Ctrl K</span></div>
+      <button class="btn-deploy">Deploy</button>
+      <button class="btn-learn">Learn</button>
+    </div>
+  </nav>
+
+  <main>
+    <section class="hero">
+      <div class="hero-bg"></div>
+      <h1>The React Framework for the Web</h1>
+      <p class="subtitle">Used by some of the world's largest companies, Next.js enables you to create
+        <strong>high-quality web applications</strong> with the power of React components.</p>
+      <div class="hero-buttons">
+        <button class="btn-primary">Get Started</button>
+        <button class="btn-secondary">Learn Next.js</button>
+      </div>
+      <div class="code-snippet">
+        <span>▲ ~ npx create-next-app@latest</span>
+      </div>
+    </section>
+
+    <section class="features-section">
+      <h2 class="section-title">What's in Next.js?</h2>
+      <div class="grid-container">
+        <div class="card">
+          <h3>Built-in Optimizations</h3>
+          <p>Automatic Image, Font, and Script Optimizations for improved UX and Core Web Vitals.</p>
+        </div>
+        <div class="card">
+          <h3>Dynamic HTML Streaming</h3>
+          <p>Instantly stream UI from the server, integrated with the App Router and React Suspense.</p>
+        </div>
+        <div class="card">
+          <h3>React Server Components</h3>
+          <p>Add components without sending additional client-side JavaScript. Built on the latest React features.</p>
+        </div>
+        <div class="card">
+          <h3>Data Fetching</h3>
+          <p>Make your React component async and await your data. Next.js supports both server and client data fetching.
+          </p>
+        </div>
+        <div class="card">
+          <h3>CSS Support</h3>
+          <p>Style your application with your favorite tools, including support for CSS Modules, Tailwind CSS, and
+            popular community libraries.</p>
+        </div>
+        <div class="card">
+          <h3>Client and Server Rendering</h3>
+          <p>Flexible rendering and caching options, including Incremental Static Regeneration (ISR), on a per-page
+            level.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="powered-by">
+      <h2>Built on a foundation of fast, production-grade tooling</h2>
+      <div class="chip-container">
+        <span>Powered By</span>
+      </div>
+      <div class="tech-grid">
+        <div class="tech-card">
+          <div class="tech-icon react">⚛</div>
+          <h3>React</h3>
+          <p>The library for web and native user interfaces.</p>
+        </div>
+        <div class="tech-card">
+          <div class="tech-icon turbo">⚡</div>
+          <h3>Turbopack</h3>
+          <p>An incremental bundler optimized for JavaScript and TypeScript.</p>
+        </div>
+        <div class="tech-card">
+          <div class="tech-icon swc">🦀</div>
+          <h3>Speedy Web Compiler</h3>
+          <p>An extensible Rust-based platform for the next generation of fast developer tools.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="showcase">
+      <h2>The framework of choice when it matters</h2>
+      <div class="showcase-grid">
+        <div class="showcase-item" style="background: #e6f3ff; color: #000;">AUDIBLE</div>
+        <div class="showcase-item" style="background: #000; border: 1px solid #333;">DICE</div>
+        <div class="showcase-item" style="background: #fff; color: #000;">NOTION</div>
+        <div class="showcase-item" style="background: #f5f5f5; color: #000;">NIKE</div>
+        <div class="showcase-item" style="background: #111;">SONOS</div>
+        <div class="showcase-item" style="background: #222;">WASHINGTON POST</div>
+      </div>
+      <button class="btn-showcase">View the Next.js Showcase</button>
+    </section>
+
+    <section class="testimonials">
+      <div class="testimonial-card">
+        <p>“With Next.js, we now consistently average 0.09 or lower for Cumulative Layout Shift, placing our site in the
+          top tier for user experience.”</p>
+        <div class="author">
+          <strong>Notion</strong>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <p>“Our UI for Frame.io responds to user input within 100ms and all animations run at a consistent 60fps with
+          Next.js.”</p>
+        <div class="author">
+          <strong>Adobe</strong>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <p>“Next.js has been a game-changer for our agency work and team collaboration. Its powerful features have
+          allowed us to build high-performance websites.”</p>
+        <div class="author">
+          <strong>Wunderman Thompson</strong>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-logo">▲ Vercel</div>
+    <div class="footer-links">
+      <div class="col">
+        <h4>Resources</h4>
+        <a href="#">Docs</a>
+        <a href="#">Learn</a>
+        <a href="#">Showcase</a>
+      </div>
+      <div class="col">
+        <h4>More</h4>
+        <a href="#">Commerce</a>
+        <a href="#">Contact Sales</a>
+        <a href="#">GitHub</a>
+      </div>
+      <div class="col">
+        <h4>About Vercel</h4>
+        <a href="#">Next.js + Vercel</a>
+        <a href="#">Open Source</a>
+        <a href="#">Enterprise</a>
+      </div>
+      <div class="col">
+        <h4>Legal</h4>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+      </div>
+    </div>
+    <div class="copyright">
+      ©️ 2026 Vercel, Inc.
+    </div>
+  </footer>
+  <script src="script.js"></script>
 </body>
+
 </html>
+```
