@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Next.js Static Clone</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-left">
+            <a href="index.html" style="display: flex; align-items: center; gap: 20px; text-decoration: none; color: white;">
+                <svg class="logo" height="20" viewBox="0 0 180 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M180 90C180 139.706 139.706 180 90 180C40.2944 180 0 139.706 0 90C0 40.2944 40.2944 0 90 0C139.706 0 180 40.2944 180 90Z" fill="white"/>
+                    <path d="M149.508 157.52L69.142 54H54V125.97H66.1136V69.3836L139.999 164.845C143.333 162.614 146.509 160.165 149.508 157.52Z" fill="black"/>
+                    <rect x="115" y="54" width="12" height="72" fill="black"/>
+                </svg>
+                <span class="logo-text">NEXT.js</span>
+            </a>
+            <ul class="nav-links">
+              <li>About</li>
+              <li>Showcase</li>
+              <li>Docs</li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <section class="about-hero">
+            <span class="badge">About The Project</span>
+            <h1>Pure HTML, CSS, <br>and Performance.</h1>
+            <p class="subtitle">
+                This project is a pixel-perfect recreation of the Next.js landing page, constructed entirely with native web technologies. Zero frameworks, zero dependencies, maximum speed.
+            </p>
+        </section>
+
+        <!-- Statistics Grid -->
+        <section class="stats-section">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <span class="stat-number">100%</span>
+                    <span class="stat-label">Static Content</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">0</span>
+                    <span class="stat-label">Dependencies</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">&lt;1s</span>
+                    <span class="stat-label">Load Time</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">100</span>
+                    <span class="stat-label">Lighthouse Score</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Core Philosophy (Reusing Card Styling) -->
+        <section class="features-section">
+            <h2 class="section-title">Design Philosophy</h2>
+            <div class="grid-container">
+                <div class="card">
+                    <h3>Native Performance</h3>
+                    <p>By bypassing complex build steps and client-side hydration, this site delivers content instantly to the browser.</p>
+                </div>
+                <div class="card">
+                    <h3>Pixel Precision</h3>
+                    <p>Every gradient, border, and interaction has been meticulously styled to match the original design language.</p>
+                </div>
+                <div class="card">
+                    <h3>Semantic HTML</h3>
+                    <p>Built with accessibility in mind, using proper semantic tags to ensure the site is readable by all devices.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="creator-section">
+            <div class="creator-content">
+                <h2>Built by a Developer</h2>
+                <p>
+                    This project serves as a demonstration of fundamental web development skills. 
+                    While frameworks like Next.js are powerful, understanding the core building blocks of the web—HTML, CSS, and JavaScript—remains essential.
+                </p>
+                <div class="hero-buttons" style="justify-content: flex-start;">
+                    <button class="btn-primary">View on GitHub</button>
+                    <button class="btn-secondary">Contact Me</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+      <div class="footer-logo">NextJS Copy</div>
+      <div class="copyright">
+        CPE411L Pair Project ; Charlene Fernandez & Ryan Gapac &copy; 2026
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
